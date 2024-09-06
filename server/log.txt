@@ -1,0 +1,20 @@
+Federated_Learning | INFO flwr 2024-04-29 11:43:48,690 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=10, round_timeout=None)
+Federated_Learning | INFO flwr 2024-04-29 11:43:48,705 | app.py:176 | Flower ECE: gRPC server running (10 rounds), SSL is disabled
+Federated_Learning | INFO flwr 2024-04-29 11:43:48,706 | server.py:89 | Initializing global parameters
+Federated_Learning | INFO flwr 2024-04-29 11:43:48,706 | server.py:276 | Requesting initial parameters from one random client
+Federated_Learning | INFO flwr 2024-04-29 11:43:50,005 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:50,005 | connection.py:55 | ChannelConnectivity.IDLE
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:50,006 | connection.py:55 | ChannelConnectivity.CONNECTING
+Federated_Learning | INFO flwr 2024-04-29 11:43:52,275 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:52,275 | connection.py:55 | ChannelConnectivity.IDLE
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:52,276 | connection.py:55 | ChannelConnectivity.CONNECTING
+Federated_Learning | INFO flwr 2024-04-29 11:43:52,713 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:52,715 | connection.py:55 | ChannelConnectivity.IDLE
+Federated_Learning | DEBUG flwr 2024-04-29 11:43:52,716 | connection.py:55 | ChannelConnectivity.CONNECTING
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:10,014 | connection.py:55 | ChannelConnectivity.TRANSIENT_FAILURE
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:10,225 | connection.py:220 | gRPC channel closed
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:12,283 | connection.py:55 | ChannelConnectivity.TRANSIENT_FAILURE
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:12,489 | connection.py:220 | gRPC channel closed
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:12,718 | connection.py:55 | ChannelConnectivity.TRANSIENT_FAILURE
+Federated_Learning | DEBUG flwr 2024-04-29 11:44:12,923 | connection.py:220 | gRPC channel closed
+Federated_Learning | INFO flwr 2024-05-02 02:45:09,683 | client_manager.py:196 | Sampling failed: number of available clients (0) is less than number of requested clients (1).

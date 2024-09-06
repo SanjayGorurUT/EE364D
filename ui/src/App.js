@@ -123,30 +123,30 @@ function App() {
         setLogData(newData);
         setLogError(null);
       }
-      //just gonna place topo chunk data here
+      // //just gonna place topo chunk data here
       
-      const schedule_response = await fetch('http://localhost:80/metrics');
-      const schedule_data = await schedule_response.json();
-      if (schedule_data){
-        //determine number of unique segments
-        const segments = new Set();
-        const newAdjacencyLists = {};
-        for (const key in schedule_data) {
-          schedule_data[key].forEach((element) => segments.add(element.segment));
-        }
-        //now we have the segments
-        segments.forEach((segment) => {
-          adjacencyLists[segment] = {};
-          for (const key in schedule_data) {
-            const adjacentNodes = schedule_data[key]
-              .filter((element) => element.segment === segment && element.tx === 1)
-              .map((element) => element.other_node);
-            newAdjacencyLists[segment][key] = adjacentNodes;
-          }
-        });
-        setAdjacencyLists(newAdjacencyLists)
-        setNumChunks(segments.size)
-      }
+      // const schedule_response = await fetch('http://localhost:80/metrics');
+      // const schedule_data = await schedule_response.json();
+      // if (schedule_data){
+      //   //determine number of unique segments
+      //   const segments = new Set();
+      //   const newAdjacencyLists = {};
+      //   for (const key in schedule_data) {
+      //     schedule_data[key].forEach((element) => segments.add(element.segment));
+      //   }
+      //   //now we have the segments
+      //   segments.forEach((segment) => {
+      //     adjacencyLists[segment] = {};
+      //     for (const key in schedule_data) {
+      //       const adjacentNodes = schedule_data[key]
+      //         .filter((element) => element.segment === segment && element.tx === 1)
+      //         .map((element) => element.other_node);
+      //       newAdjacencyLists[segment][key] = adjacentNodes;
+      //     }
+      //   });
+      //   setAdjacencyLists(newAdjacencyLists)
+      //   setNumChunks(segments.size)
+      // }
     } catch (error) {
       console.error('Error fetching metrics and node schedules:', error);
       setLogError('Log file not available yet.');
@@ -156,7 +156,7 @@ function App() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       fetchMetrics();
-    }, 1000);
+    }, 2500);
 
     return () => clearInterval(intervalId);
   }, []); 
@@ -324,7 +324,7 @@ function App() {
       </div>
 
       <div class="divider"></div>
-
+      {/*
       <h3 class='subheader'>Topology Visualization</h3>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <label htmlFor="chunkSelector">Select Chunk:</label>
@@ -340,7 +340,7 @@ function App() {
       <div class="topology-visualization-div">
         <TopologyVisualization adjacencyList={adjacencyLists[selectedChunk]} />
       </div>
-      <div class="divider"></div>
+      <div class="divider"></div>*/}
     </div>
   );
 }

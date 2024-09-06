@@ -37,7 +37,7 @@ num_replicas = args.num_replicas
 num_segments = num_chunks*num_replicas
 
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serversocket.bind((socket.gethostbyname(socket.gethostname()), 6000))
+serversocket.bind((socket.gethostbyname(socket.gethostname()), 7500))
 serversocket.listen(num_nodes)
 
 

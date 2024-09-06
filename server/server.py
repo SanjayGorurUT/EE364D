@@ -45,10 +45,10 @@ num_chunks = args.num_chunks
 num_replicas = args.num_replicas
 num_segments = num_chunks*num_replicas
 
-wandb.init(
-    project = 'FLNET',
-    name  = 'FLNET'
-)
+#wandb.init(
+#    project = 'FLNET',
+#    name  = 'FLNET'
+#)
 
 def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
     # Multiply accuracy of each client by the number of examples used
@@ -119,7 +119,7 @@ open('schedule.txt','w').close()
 
 # Start Flower server
 fl.server.start_server(
-    server_address="0.0.0.0:8080",
+    server_address="0.0.0.0:8000",
     config=fl.server.ServerConfig(num_rounds=num_rounds),
     strategy=strategy,
     client_manager=ClientManager(num_nodes),
